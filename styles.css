@@ -1,0 +1,81 @@
+/* PROPRIEDADES
+
+'container' e 'item(s)' */
+
+/* Container */
+
+/*
+dislay: grid;
+grid-template-columns;
+grid-template-rows;
+grid-gap;
+    grid-row-gap
+    grid-column-gap
+grid-template-areas;
+
+e mais 4 props e alinhamentos
+*/
+
+/* ITEMS */
+
+/*
+grid-column
+    grid-column-start
+    grid-column-end
+grid-row
+    grid-row-start
+    grid-row-end
+grid-area
+
+e mais 2 props e alinhamentos
+*/
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: burlywood;
+}
+
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh 10vh;
+    grid-template-areas: "h h h"
+                        "m m a"
+                        "f f f"
+                        
+}
+
+
+header{
+    background: cadetblue;
+    grid-area: h;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". d"
+    ". .";
+
+}
+header div{
+    grid-area: d;
+    background: darkblue;
+}
+main{
+    background: red;
+    grid-area: m;
+}
+aside{
+    background: green;
+    grid-area: a;
+}
+footer{
+    background: cornflowerblue;
+    grid-area: f;
+}
